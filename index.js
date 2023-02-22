@@ -14,7 +14,7 @@ app.get("/", (req, res) => {
     if (!password) return res.status(200).json({
         success: false,
         message: 'Error en la contraseña'
-      })
+    })
     if (password) {
         const secretKey = "mi_clave_secreta";
         const token = jwt.sign({ username: username }, secretKey);
@@ -37,10 +37,12 @@ app.post("/", (req, res) => {
             const secretKey = "mi_clave_secreta";
             const token = jwt.sign({ username: username }, secretKey);
             console.log(token)
-            res.send(`Hola  ${token}`);
-            return token
+            return res.status(200).json({
+                success: true,
+                message: 'success',
+                token
+            })
         }
-        res.send(`Hola papu ${username || ''}`);
 });
 
 // Initialize server
