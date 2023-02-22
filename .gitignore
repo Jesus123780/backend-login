@@ -1,0 +1,37 @@
+# Módulos de Node.js
+node_modules/
+
+# Archivos generados por herramientas de construcción
+dist/
+build/
+*.log
+npm-debug.log*
+
+# Variables de entorno y configuraciones locales
+.env
+config.js
+*.env.local
+*.env.development.local
+*.env.test.local
+*.env.production.local
+
+# Archivos de caché y de compilación
+.pnp/
+.pnp.js
+.cache/
+.nuxt/
+.next/
+out/
+public/
+serverless/
+yarn-error.log
+
+# Dependencias específicas del sistema operativo
+.DS_Store
+Thumbs.db
+
+# Otros archivos
+coverage/
+test-results.xml
+package-lock.json
+yarn.lock
