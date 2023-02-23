@@ -29,7 +29,7 @@ app.post("/", (req, res) => {
         // console.log(req)
         const username = req.body.username;
         const password = req.body.password;
-        if (!password) return res.status(200).json({
+        if (!password) return res.status(500).json({
             success: false,
             message: 'Error en la contraseña'
         })
